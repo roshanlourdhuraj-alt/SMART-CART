@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+nav {
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.wishlist-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-btn {
+    background: green;
+    color: white;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+}

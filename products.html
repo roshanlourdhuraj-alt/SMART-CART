@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SmartCart - Products
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- HEADER -->
+  <header class="main-header">
+   <div class="logo">
+    🛒 SmartCart
+   </div>
+   <div class="search-box">
+
+    <input
+        id="productSearch"
+        type="text"
+        placeholder="Search for products..."
+        onkeyup="searchAllProducts()"
+    >
+
+    <button
+        type="button"
+        onclick="searchAllProducts()"
+    >
+        🔍 Search
+    </button>
+
+    <button
+        type="button"
+        id="voiceSearchBtn"
+        onclick="startVoiceSearch()"
+    >
+        🎤 Voice Search
+    </button>
+
+</div>
+   <div class="header-actions">
+    <span>
+     👤 Hello, User
+    </span>
+    <a href="cart.html">
+     🛒 Cart
+    </a>
+   </div>
+  </header>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+   <a href="home.html">
+    🏠 Home
+   </a>
+   <a href="categories.html">
+    📂 Categories
+   </a>
+   <a href="products.html">
+    🛍️ Products
+   </a>
+   <a href="wishlist.html">
+    Wishlist
+   </a>
+    
+   <a href="cart.html">
+    🛒 Cart
+   </a>
+   <a href="profile.html">
+    👤 Profile
+   </a>
+   <a href="index.html">
+    🚪 Logout
+   </a>
+  </nav>
+  <!-- PAGE TITLE -->
+  <section class="products-page-title">
+   <h1>
+    🛍️ All Products
+   </h1>
+   <p>
+    Discover amazing products at great prices
+   </p>
+  </section>
+  <!-- FILTER SECTION -->
+  <section class="products-filter">
+   <button class="product-filter-btn active" onclick="filterProducts('all', this)">
+    All
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('electronics', this)">
+    📱 Electronics
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('fashion', this)">
+    👕 Fashion
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('laptops', this)">
+    💻 Laptops
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('books', this)">
+    📚 Books
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('gaming', this)">
+    🎮 Gaming
+   </button>
+   <button class="product-filter-btn" onclick="filterProducts('grocery', this)">
+    🛒 Grocery
+   </button>
+  </section>
+  <!-- PRODUCT SECTION -->
+  <main class="all-products-container">
+
+    <div class="home-product-grid">
+
+   <!-- ELECTRONICS PRODUCT 1 -->
+   <div class="all-product-card electronics" data-name="smartphone">
+    <div class="all-product-image">
+      <img src="images/smart phone.jpg" alt="smartphone">
+    </div>
+    <span class="product-badge">
+     20% OFF
+    </span>
+    <h3>
+     SmartPhone
+    </h3>
+    <p>
+     Latest smartphone with powerful performance
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹19,999
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-14 Days
+    </p>
+    <button 
+    type="button"
+    onclick='addProductToCart("SmartPhone", 19999, "Electronics", "images/smartphone.jpg")'
+>
+    🛒 Add to Cart
+    </button>
+    <button 
+    type="button"
+    onclick='addToWishlist("SmartPhone", 19999, "images/smartphone.jpg")'
+>
+    ❤️ Wishlist
+   </button>
+   </div>
+   <!-- ELECTRONICS PRODUCT 2 -->
+   <div class="all-product-card electronics" data-name="wireless headphones">
+    <div class="all-product-image">
+     <img src="images/wireless headphones.jpg" alt="wireless headphones">
+    </div>
+    <span class="product-badge">
+     15% OFF
+    </span>
+    <h3>
+     Wireless Headphones
+    </h3>
+    <p>
+     High quality wireless audio experience
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹1,999
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7–10 Days
+    </p>
+    <button
+        type="button"
+        onclick='addProductToCart("Wireless Headphones", 1999, "Electronics", "images/wirelessheadphones.jpg" )'>
+     🛒 Add to Cart
+    </button>
+    <button
+    type="button"
+    onclick='addToWishlist("Wireless Headphones", 1999, "images/wirelessheadphones.jpg" )'>
+     ❤️ Wishlist
+    </button>
+   </div>
+   <!-- ELECTRONICS PRODUCT 3 -->
+   <div class="all-product-card electronics" data-name="smart watch">
+    <div class="all-product-image">
+     <img src="images/smart watch.avif" alt="smart watch">
+    </div>
+    <span class="product-badge">
+     10% OFF
+    </span>
+    <h3>
+     Smart Watch
+    </h3>
+    <p>
+     Track your fitness and daily activities
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐☆
+    </div>
+    <h4>
+     ₹999
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Smart Watch", 2499, "Electronics", "images/smart watch.avif")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Smart Watch", 2499, "images/smart watch.avif")'>
+    ❤️ Wishlist
+</button>
+
+    </div>
+    
+<!-- ELECTRONICS PRODUCT 1 -->
+<div class="all-product-card electronics" data-name="Samsung Galaxy S24">
+
+    <div class="all-product-image">
+        <img src="images/sam s24.jpg" alt="Samsung Galaxy S24">
+    </div>
+
+    <span class="product-badge">
+        15% OFF
+    </span>
+
+    <h3>Samsung Galaxy S24</h3>
+
+    <p>
+        Powerful smartphone with premium camera and performance
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹49,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button type="button"
+    onclick='addProductToCart("Samsung S24", 74999, "Electronics", "images/sam s24.jpg")'>
+    🛒 Add to Cart
+    </button>
+    <button
+        type="button"
+        onclick='addToWishlist("Samsung S24", 74999, "Electronics", "images/sam s24.jpg")'
+    >
+        💗 Wishlist
+    </button>
+
+</div>
+
+
+<!-- ELECTRONICS PRODUCT 2 -->
+<div class="all-product-card electronics" data-name="iPhone 15">
+
+    <div class="all-product-image">
+        <img src="images/Apple-iPhone-15-.jpg" alt="iPhone 15">
+    </div>
+
+    <span class="product-badge">
+        10% OFF
+    </span>
+
+    <h3>iPhone 15</h3>
+
+    <p>
+        Advanced smartphone with excellent camera and battery
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹59,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button type="button"
+    onclick='addProductToCart("iPhone 15", 69999, "Electronics", "images/Apple-Iphone-15-.jpg")'>
+    🛒 Add to Cart
+    </button>
+
+   <button type="button"
+    onclick='addToWishlist("iPhone 15", 69999, "images/Apple-Iphone-15-.jpg")'>
+    ❤️ Wishlist
+    </button>
+
+</div>
+
+
+<!-- ELECTRONICS PRODUCT 3 -->
+<div class="all-product-card electronics" data-name="Sony Bluetooth Speaker">
+
+    <div class="all-product-image">
+        <img src="images/sony bluetooth speaker.jpg" alt="Sony Bluetooth Speaker">
+    </div>
+
+    <span class="product-badge">
+        20% OFF
+    </span>
+
+    <h3>Sony Bluetooth Speaker</h3>
+
+    <p>
+        Portable wireless speaker with powerful sound
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h4>₹4,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button type="button"
+    onclick='addProductToCart("Sony Bluetooth Speaker", 3499, "Electronics", "images/sony bluetooth speaker.jpg")'>
+    🛒 Add to Cart
+    </button>
+
+    <button type="button"
+    onclick='addToWishlist("Sony Bluetooth Speaker", 3499, "images/sony bluetooth speaker.jpg")'>
+    ❤️ Wishlist
+    </button>
+</div>
+
+
+<!-- ELECTRONICS PRODUCT 4 -->
+<div class="all-product-card electronics" data-name="Apple AirPods">
+
+    <div class="all-product-image">
+        <img src="images/apple airpods.jpg" alt="Apple airpods">
+    </div>
+
+    <span class="product-badge">
+        18% OFF
+    </span>
+
+    <h3>Apple AirPods</h3>
+
+    <p>
+        Wireless earbuds with clear audio and comfortable fit
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹14,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button type="button"
+    onclick='addProductToCart("Apple AirPods", 12999, "Electronics", "images/apple airpods.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Apple AirPods", 12999, "images/apple airpods.jpg")'>
+    ❤️ Wishlist
+</button>
+   
+</div>
+
+
+<!-- ELECTRONICS PRODUCT 5 -->
+<div class="all-product-card electronics" data-name="Canon Digital Camera">
+
+    <div class="all-product-image">
+        <img src="images/canon digital camera.jpg" alt="canon digital camera">
+    </div>
+
+    <span class="product-badge">
+        12% OFF
+    </span>
+
+    <h3>Canon Digital Camera</h3>
+
+    <p>
+        High-quality digital camera for photos and videos
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h4>₹39,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button
+        type="button"
+        onclick='addProductToCart("Canon Digital Camera", 39999, "Electronics", "images/canon digital camera.jpg")'
+    >
+        🛒 Add to Cart
+    </button>
+
+    <button
+        type="button"
+        onclick='addToWishlist("Canon Digital Camera", 39999, "Electronics", "images/canon digital camera.jpg")'
+    >
+        💗 Wishlist
+    </button>
+
+</div>
+
+
+<!-- ELECTRONICS PRODUCT 6 -->
+<div class="all-product-card electronics" data-name="Smart LED TV">
+
+    <div class="all-product-image">
+        <img src="images/smart led.jpg" alt="smart LED TV">
+    </div>
+
+    <span class="product-badge">
+        25% OFF
+    </span>
+
+    <h3>Smart LED TV</h3>
+
+    <p>
+        Full HD smart television with streaming features
+    </p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹29,999</h4>
+
+    <p class="delivery">
+        🚚 Delivery in 3–5 days
+    </p>
+
+    <button type="button"
+    onclick='addProductToCart("Smart LED", 12999, "Electronics", "images/smart led.jpg")'>
+    🛒 Add to Cart
+    </button>
+
+    <button
+        type="button"
+        onclick='addToWishlist("Smart LED", 12999, "images/smart led.jpg")''
+    >
+        💗 Wishlist
+    </button>
+
+</div>    
+
+   <!-- FASHION PRODUCT 1 -->
+   <div class="all-product-card fashion" data-name="mens t shirt">
+    <div class="all-product-image">
+     <img src="images/men's  tshirt.jpg" alt="mens t shirt">
+    </div>
+    <span class="product-badge">
+     25% OFF
+    </span>
+    <h3>
+     Men's T-Shirt
+    </h3>
+    <p>
+     Comfortable cotton casual t-shirt
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐☆
+    </div>
+    <h4>
+     ₹599
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>  
+    </button>
+    <button type="button"
+    onclick='addProductToCart("Men&#39;s T-Shirt", 599, "Fashion", "images/men&#39;s tshirt.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Men&#39;s T-Shirt", 599, "images/men&#39;s tshirt.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+     <!-- FASHION PRODUCT 2 -->
+   <div class="all-product-card fashion" data-name="womens dress">
+    <div class="all-product-image">
+     <img src="images/women dress.jpg" alt="womens dress">
+    </div>
+    <span class="product-badge">
+     20% OFF
+    </span>
+    <h3>
+     Women's Dress
+    </h3>
+    <p>
+     Stylish and trendy fashion dress
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹1,299
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    </button>
+    <button type="button"
+    onclick='addProductToCart("Women Dress", 1299, "Fashion", "images/women dress.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Women Dress", 1299, "images/women dress.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- FASHION PRODUCT 3 -->
+   <div class="all-product-card fashion" data-name="sports shoes">
+    <div class="all-product-image">
+     <img src="images/sports shoe.jpg" alt="sports shoes">
+    </div>
+    <span class="product-badge">
+     30% OFF
+    </span>
+    <h3>
+     Sports Shoes
+    </h3>
+    <p>
+     Comfortable shoes for daily activities
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐☆
+    </div>
+    <h4>
+     ₹2,499
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Sports Shoe", 1999, "Sports", "images/sports shoe.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Sports Shoe", 1999, "images/sports shoe.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- LAPTOP PRODUCT 1 -->
+   <div class="all-product-card laptops" data-name="student laptop">
+    <div class="all-product-image">
+     <img src="images/student laptop.jpg" alt="student laptop">
+    </div>
+    <span class="product-badge">
+     10% OFF
+    </span>
+    <h3>
+     Student Laptop
+    </h3>
+    <p>
+     Perfect laptop for study and work
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹45,999
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Student Laptop", 42999, "Electronics", "images/student laptop.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Student Laptop", 42999, "images/student laptop.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- LAPTOP PRODUCT 2 -->
+   <div class="all-product-card laptops" data-name="professional laptop">
+    <div class="all-product-image">
+     <img src="images/proffesional laptop.jpg" alt="professional laptop">
+    </div>
+    <span class="product-badge">
+     15% OFF
+    </span>
+    <h3>
+     Professional Laptop
+    </h3>
+    <p>
+     Powerful performance for professionals
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹75,999
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Professional Laptop", 59999, "Electronics", "images/professional laptop.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Professional Laptop", 59999, "images/professional laptop.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- BOOK PRODUCT -->
+   <div class="all-product-card books" data-name="programming book">
+    <div class="all-product-image">
+     <img src="images/programming books.jpg" alt="programming book">
+    </div>
+    <span class="product-badge">
+     5% OFF
+    </span>
+    <h3>
+     Programming Book
+    </h3>
+    <p>
+     Learn coding and programming easily
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐⭐
+    </div>
+    <h4>
+     ₹499
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Programming Books", 799, "Books", "images/programming books.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Programming Books", 799, "images/programming books.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- GAMING PRODUCT -->
+   <div class="all-product-card gaming" data-name="gaming controller">
+    <div class="all-product-image">
+     <img src="images/gaming controller.jpg" alt="gaming controller">
+    </div>
+    <span class="product-badge">
+     20% OFF
+    </span>
+    <h3>
+     Gaming Controller
+    </h3>
+    <p>
+     Enjoy an amazing gaming experience
+    </p>
+    <div class="product-rating">
+     ⭐⭐⭐⭐☆
+    </div>
+    <h4>
+     ₹1,499
+    </h4>
+    <p class="delivery-info">
+    🚚 Delivery: 7-10 Days
+    </p>
+    <button type="button"
+    onclick='addProductToCart("Gaming Controller", 2499, "Electronics", "images/gaming controller.jpg")'>
+    🛒 Add to Cart
+</button>
+
+<button type="button"
+    onclick='addToWishlist("Gaming Controller", 2499, "images/gaming controller.jpg")'>
+    ❤️ Wishlist
+</button>
+   </div>
+   <!-- GROCERY PRODUCT 1 -->
+   <div class="all-product-card grocery" data-name="premium rice">
+
+    <div class="all-product-image">
+        <img src="images/premium rice.jpg" alt="Premium Rice">
+    </div>
+
+    <span class="product-badge">
+        10% OFF
+    </span>
+
+    <h3>Premium Rice</h3>
+
+    <p>High quality premium rice for everyday cooking</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹699</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Premium Rice", 699, "Grocery", "images/premium rice.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Premium Rice", 699, "images/premium rice.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 2 -->
+   <div class="all-product-card grocery" data-name="cooking oil">
+
+    <div class="all-product-image">
+        <img src="images/cooking oil.jpg" alt="Cooking Oil">
+    </div>
+
+    <span class="product-badge">
+        15% OFF
+    </span>
+
+    <h3>Cooking Oil</h3>
+
+    <p>Good quality cooking oil for daily use</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h4>₹169</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Cooking Oil", 169, "Grocery", "images/cooking oil.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Cooking Oil", 169, "images/cooking oil.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 3 -->
+   <div class="all-product-card grocery" data-name="toor dal">
+
+    <div class="all-product-image">
+        <img src="images/toor dal.jpg" alt="Toor Dal">
+    </div>
+
+    <span class="product-badge">
+        12% OFF
+    </span>
+
+    <h3>Toor Dal</h3>
+
+    <p>Fresh and quality toor dal for delicious meals</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹189</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Toor Dal", 189, "Grocery", "images/toor dal.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Toor Dal", 189, "images/toor dal.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 4 -->
+   <div class="all-product-card grocery" data-name="mixed nuts">
+
+    <div class="all-product-image">
+        <img src="images/mixed nuts.jpg" alt="Mixed Nuts">
+    </div>
+
+    <span class="product-badge">
+        20% OFF
+    </span>
+
+    <h3>Mixed Nuts</h3>
+
+    <p>Premium mixed nuts packed fresh</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹499</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Mixed Nuts", 499, "Grocery", "images/mixed nuts.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Mixed Nuts", 499, "images/mixed nuts.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 5 -->
+   <div class="all-product-card grocery" data-name="sugar">
+
+    <div class="all-product-image">
+        <img src="images/sugar.jpg" alt="Sugar">
+    </div>
+
+    <span class="product-badge">
+        8% OFF
+    </span>
+
+    <h3>Sugar</h3>
+
+    <p>Fine quality sugar for everyday use</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h4>₹59</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Sugar", 59, "Grocery", "images/sugar.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Sugar", 59, "images/sugar.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 6 -->
+   <div class="all-product-card grocery" data-name="wheat flour">
+
+    <div class="all-product-image">
+        <img src="images/wheat flour.jpg" alt="Wheat Flour">
+    </div>
+
+    <span class="product-badge">
+        10% OFF
+    </span>
+
+    <h3>Wheat Flour</h3>
+
+    <p>Soft and fine wheat flour for everyday cooking</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹249</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Wheat Flour", 249, "Grocery", "images/wheat flour.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Wheat Flour", 249, "images/wheat flour.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 7 -->
+   <div class="all-product-card grocery" data-name="spice powder">
+
+    <div class="all-product-image">
+        <img src="images/spice powder.jpg" alt="Spice Powder">
+    </div>
+
+    <span class="product-badge">
+        18% OFF
+    </span>
+
+    <h3>Spice Powder</h3>
+
+    <p>Fresh and aromatic spice powder</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+    </div>
+
+    <h4>₹129</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Spice Powder", 129, "Grocery", "images/spice powder.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Spice Powder", 129, "images/spice powder.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+   <!-- GROCERY PRODUCT 8 -->
+   <div class="all-product-card grocery" data-name="biscuits snacks">
+
+    <div class="all-product-image">
+        <img src="images/biscuit&snacks.jpg" alt="Biscuits and Snacks">
+    </div>
+
+    <span class="product-badge">
+        15% OFF
+    </span>
+
+    <h3>Biscuits & Snacks</h3>
+
+    <p>Tasty biscuits and snacks for every occasion</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+    </div>
+
+    <h4>₹199</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery: 1-2 Days
+    </p>
+
+    <button type="button"
+        onclick='addProductToCart("Biscuits & Snacks", 199, "Grocery", "images/biscuits snacks.jpg")'>
+        🛒 Add to Cart
+    </button>
+
+    <button type="button"
+        onclick='addToWishlist("Biscuits & Snacks", 199, "images/biscuits snacks.jpg")'>
+        ❤️ Wishlist
+    </button>
+
+</div>
+  </main>
+  <!-- NO RESULT MESSAGE -->
+  <div class="no-product-message" id="noProductMessage">
+   😔 No products found
+  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+   <h2>
+    🛒 SmartCart
+   </h2>
+   <p>
+    Shop Smart. Live Better.
+   </p>
+  </footer>
+  <script src="products.js">
+  </script>
+  <script src="wishlist.js">
+  </script>
+  <script src="voice.js"></script>
+ </body>
+</html>

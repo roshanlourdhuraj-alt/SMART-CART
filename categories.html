@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCart - Categories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🛒 SmartCart
+    </div>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html" class="active">Categories</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     CATEGORY PAGE
+========================= -->
+
+<main class="all-products-container">
+
+    <!-- PAGE TITLE -->
+
+    <div class="products-page-header">
+
+        <h1>Shop By Categories</h1>
+
+        <p>
+            Explore our products category-wise
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         SEARCH
+    ========================= -->
+
+    <div class="product-search-section">
+
+        <input
+            type="text"
+            id="categorySearch"
+            placeholder="Search products..."
+            onkeyup="searchCategoryProducts()"
+        >
+
+        <button
+            type="button"
+            id="globalVoiceBtn"
+            onclick="startSmartCartVoice()"
+        >
+            🎤 Voice
+        </button>
+
+        <button
+            type="button"
+            onclick="searchCategoryProducts()"
+        >
+            🔍 Search
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         CATEGORY FILTER
+    ========================= -->
+
+    <div class="category-filter">
+
+        <button
+            class="active"
+            onclick="filterCategory('all', this)"
+        >
+            All
+        </button>
+
+        <button
+            onclick="filterCategory('electronics', this)"
+        >
+            Electronics
+        </button>
+
+        <button
+            onclick="filterCategory('fashion', this)"
+        >
+            Fashion
+        </button>
+
+        <button
+            onclick="filterCategory('laptops', this)"
+        >
+            Laptops
+        </button>
+
+        <button
+            onclick="filterCategory('books', this)"
+        >
+            Books
+        </button>
+
+        <button
+            onclick="filterCategory('gaming', this)"
+        >
+            Gaming
+        </button>
+
+        <button
+            onclick="filterCategory('grocery', this)"
+        >
+            Grocery
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         NO PRODUCT MESSAGE
+    ========================= -->
+
+    <div
+        id="noCategoryProductMessage"
+        style="display:none; text-align:center; padding:30px;"
+    >
+
+        <h2>😔 No Products Found</h2>
+
+        <p>
+            Try searching with another product name.
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         ELECTRONICS
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="electronics"
+    >
+
+        <div class="category-section-title">
+            <h2>📱 Electronics</h2>
+            <p>Mobiles, headphones, smart watches and more</p>
+        </div>
+
+
+        <div class="home-product-grid">
+
+
+            <!-- SMARTPHONE -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="SmartPhone"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                    <img
+                        src="images/smart phone.jpg"
+                        alt="SmartPhone"
+                    >
+
+                </div>
+
+                <h3>SmartPhone</h3>
+
+                <p>Latest smartphone with modern features</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹19,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("SmartPhone", 19999, "Electronics", "images/smart phone.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("SmartPhone", 19999, "images/smart phone.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- WIRELESS HEADPHONES -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Wireless Headphones"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img
+                        src="images/wireless headphones.jpg"
+                        alt="Wireless Headphones"
+                    >
+
+                </div>
+
+                <h3>Wireless Headphones</h3>
+
+                <p>Clear sound with comfortable wireless design</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.6)</span>
+                </div>
+
+                <h4>₹1,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Wireless Headphones", 1999, "Electronics", "images/wireless headphones.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Wireless Headphones", 1999, "images/wireless headphones.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMART WATCH -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Smart Watch"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Deal
+                    </span>
+
+                    <img
+                        src="images/smart watch.avif"
+                        alt="Smart Watch"
+                    >
+
+                </div>
+
+                <h3>Smart Watch</h3>
+
+                <p>Smart fitness and lifestyle watch</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.4)</span>
+                </div>
+
+                <h4>₹999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Smart Watch", 999, "Electronics", "images/smart watch.avif")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Smart Watch", 999, "images/smart watch.avif")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAMSUNG S24 -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Samsung Galaxy S24"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Hot
+                    </span>
+
+                    <img
+                        src="images/sam s24.jpg"
+                        alt="Samsung Galaxy S24"
+                    >
+
+                </div>
+
+                <h3>Samsung Galaxy S24</h3>
+
+                <p>Premium smartphone with powerful performance</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.8)</span>
+                </div>
+
+                <h4>₹49,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Samsung Galaxy S24", 49999, "Electronics", "images/sam s24.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Samsung Galaxy S24", 49999, "images/sam s24.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- IPHONE 15 -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Apple iPhone 15"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Bestseller
+                    </span>
+
+                    <img
+                        src="images/Apple-Iphone-15-.jpg"
+                        alt="Apple iPhone 15"
+                    >
+
+                </div>
+
+                <h3>Apple iPhone 15</h3>
+
+                <p>Powerful performance with premium design</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.9)</span>
+                </div>
+
+                <h4>₹59,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Apple iPhone 15", 59999, "Electronics", "images/Apple-Iphone-15-.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Apple iPhone 15", 59999, "images/Apple-Iphone-15-.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SONY SPEAKER -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Sony Bluetooth Speaker"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Deal
+                    </span>
+
+                    <img
+                        src="images/sony bluetooth speaker.jpg"
+                        alt="Sony Bluetooth Speaker"
+                    >
+
+                </div>
+
+                <h3>Sony Bluetooth Speaker</h3>
+
+                <p>Portable speaker with powerful audio</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹4,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Sony Bluetooth Speaker", 4999, "Electronics", "images/sony bluetooth speaker.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Sony Bluetooth Speaker", 4999, "images/sony bluetooth speaker.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- AIRPODS -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Apple AirPods"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img
+                        src="images/apple airpods.jpg"
+                        alt="Apple AirPods"
+                    >
+
+                </div>
+
+                <h3>Apple AirPods</h3>
+
+                <p>Wireless earbuds with premium sound</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.7)</span>
+                </div>
+
+                <h4>₹14,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Apple AirPods", 14999, "Electronics", "images/apple airpods.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Apple AirPods", 14999, "images/apple airpods.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CANON CAMERA -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Canon Digital Camera"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Premium
+                    </span>
+
+                    <img
+                        src="images/canon digital camera.jpg"
+                        alt="Canon Digital Camera"
+                    >
+
+                </div>
+
+                <h3>Canon Digital Camera</h3>
+
+                <p>Capture high-quality photos and videos</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.6)</span>
+                </div>
+
+                <h4>₹39,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Canon Digital Camera", 39999, "Electronics", "images/canon digital camera.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Canon Digital Camera", 39999, "images/canon digital camera.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SMART LED TV -->
+
+            <div
+                class="all-product-card electronics"
+                data-name="Smart LED TV"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                    <img
+                        src="images/smart led.jpg"
+                        alt="Smart LED TV"
+                    >
+
+                </div>
+
+                <h3>Smart LED TV</h3>
+
+                <p>Entertainment with smart features</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹29,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Smart LED TV", 29999, "Electronics", "images/smart led.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Smart LED TV", 29999, "images/smart led.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FASHION
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="fashion"
+    >
+
+        <div class="category-section-title">
+
+            <h2>👕 Fashion</h2>
+
+            <p>
+                Stylish clothing and footwear
+            </p>
+
+        </div>
+
+
+        <div class="home-product-grid">
+
+<!-- MEN T SHIRT -->
+
+<div
+    class="all-product-card fashion"
+    data-name="Men's T-Shirt"
+>
+
+    <div class="all-product-image">
+
+        <span class="product-badge">
+            New
+        </span>
+
+        <img
+            src="images/men's tshirt.jpg"
+            alt="Men's T-Shirt"
+        >
+
+    </div>
+
+    <h3>Men's T-Shirt</h3>
+
+    <p>Comfortable casual cotton T-shirt</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐☆
+        <span>(4.3)</span>
+    </div>
+
+    <h4>₹699</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery in 3–5 Days
+    </p>
+
+    <div class="product-buttons">
+
+    <button
+        type="button"
+        onclick='addProductToCart("Men&apos;s T-Shirt", 699, "Fashion", "images/men&apos;s  tshirt.jpg")'
+    >
+        🛒 Add to Cart
+    </button>
+
+    <button
+        type="button"
+        onclick='addToWishlist("Men&apos;s T-Shirt", 699, "images/men&apos;s  tshirt.jpg")'
+    >
+        ❤️ Wishlist
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- WOMEN DRESS -->
+
+<div
+    class="all-product-card fashion"
+    data-name="Women's Dress"
+>
+
+    <div class="all-product-image">
+
+        <span class="product-badge">
+            Trending
+        </span>
+
+        <img
+            src="images/women dress.jpg"
+            alt="Women's Dress"
+        >
+
+    </div>
+
+    <h3>Women's Dress</h3>
+
+    <p>Elegant and comfortable fashion dress</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+        <span>(4.5)</span>
+    </div>
+
+    <h4>₹1,299</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery in 3–5 Days
+    </p>
+
+    <div class="product-buttons">
+
+    <button
+        type="button"
+        onclick='addProductToCart("Women&apos;s Dress", 1299, "Fashion", "images/women dress.jpg")'
+    >
+        🛒 Add to Cart
+    </button>
+
+    <button
+        type="button"
+        onclick='addToWishlist("Women&apos;s Dress", 1299, "images/women dress.jpg")'
+    >
+        ❤️ Wishlist
+    </button>
+
+</div>
+
+
+<!-- SPORTS SHOES -->
+
+<div
+    class="all-product-card fashion"
+    data-name="Sports Shoes"
+>
+
+    <div class="all-product-image">
+
+        <span class="product-badge">
+            Popular
+        </span>
+
+        <img
+            src="images/sports shoe.jpg"
+            alt="Sports Shoes"
+        >
+
+    </div>
+
+    <h3>Sports Shoes</h3>
+
+    <p>Comfortable shoes for sports and daily use</p>
+
+    <div class="product-rating">
+        ⭐⭐⭐⭐⭐
+        <span>(4.4)</span>
+    </div>
+
+    <h4>₹2,499</h4>
+
+    <p class="delivery-info">
+        🚚 Delivery in 3–5 Days
+    </p>
+
+    <div class="product-buttons">
+
+        <button
+            type="button"
+            onclick='addProductToCart("Sports Shoes", 2499, "Fashion", "images/sports shoe.jpg")'
+        >
+            🛒 Add to Cart
+        </button>
+
+        <button
+            type="button"
+            onclick='addToWishlist("Sports Shoes", 2499, "images/sports shoe.jpg")'
+        >
+            ❤️ Wishlist
+        </button>
+
+    </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         LAPTOPS
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="laptops"
+    >
+
+        <div class="category-section-title">
+
+            <h2>💻 Laptops</h2>
+
+            <p>
+                Laptops for students and professionals
+            </p>
+
+        </div>
+
+
+        <div class="home-product-grid">
+
+
+            <!-- STUDENT LAPTOP -->
+
+            <div
+                class="all-product-card laptops"
+                data-name="Student Laptop"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Student Choice
+                    </span>
+
+                    <img
+                        src="images/student laptop.jpg"
+                        alt="Student Laptop"
+                    >
+
+                </div>
+
+                <h3>Student Laptop</h3>
+
+                <p>Affordable laptop for students</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹45,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Student Laptop", 45999, "Laptops", "images/student laptop.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Student Laptop", 45999, "images/student laptop.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFESSIONAL LAPTOP -->
+
+            <div
+                class="all-product-card laptops"
+                data-name="Professional Laptop"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Premium
+                    </span>
+
+                    <img
+                        src="images/proffesional laptop.jpg"
+                        alt="Professional Laptop"
+                    >
+
+                </div>
+
+                <h3>Professional Laptop</h3>
+
+                <p>Powerful laptop for professional work</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.7)</span>
+                </div>
+
+                <h4>₹75,999</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Professional Laptop", 75999, "Laptops", "images/proffesional laptop.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Professional Laptop", 75999, "images/proffesional laptop.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         BOOKS
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="books"
+    >
+
+        <div class="category-section-title">
+
+            <h2>📚 Books</h2>
+
+            <p>
+                Books for programming and learning
+            </p>
+
+        </div>
+
+
+        <div class="home-product-grid">
+
+
+            <!-- PROGRAMMING BOOK -->
+
+            <div
+                class="all-product-card books"
+                data-name="Programming Book"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Bestseller
+                    </span>
+
+                    <img
+                        src="images/programming books.jpg"
+                        alt="Programming Book"
+                    >
+
+                </div>
+
+                <h3>Programming Book</h3>
+
+                <p>Learn programming with easy examples</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.6)</span>
+                </div>
+
+                <h4>₹499</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Programming Book", 499, "Books", "images/programming books.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Programming Book", 499, "images/programming books.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         GAMING
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="gaming"
+    >
+
+        <div class="category-section-title">
+
+            <h2>🎮 Gaming</h2>
+
+            <p>
+                Gaming accessories and controllers
+            </p>
+
+        </div>
+
+
+        <div class="home-product-grid">
+
+
+            <!-- GAMING CONTROLLER -->
+
+            <div
+                class="all-product-card gaming"
+                data-name="Gaming Controller"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Gaming
+                    </span>
+
+                    <img
+                        src="images/gaming controller.jpg"
+                        alt="Gaming Controller"
+                    >
+
+                </div>
+
+                <h3>Gaming Controller</h3>
+
+                <p>Comfortable controller for gaming</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹1,499</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 3–5 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Gaming Controller", 1499, "Gaming", "images/gaming controller.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Gaming Controller", 1499, "images/gaming controller.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         GROCERY
+    ================================================== -->
+
+    <section
+        class="category-product-section"
+        data-category-section="grocery"
+    >
+
+        <div class="category-section-title">
+
+            <h2>🛒 Grocery</h2>
+
+            <p>
+                Daily essentials with fast delivery
+            </p>
+
+        </div>
+
+
+        <div class="home-product-grid">
+
+
+            <!-- PREMIUM RICE -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Premium Rice"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Fast Delivery
+                    </span>
+
+                    <img
+                        src="images/premium rice.jpg"
+                        alt="Premium Rice"
+                    >
+
+                </div>
+
+                <h3>Premium Rice</h3>
+
+                <p>High-quality rice for everyday cooking</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.7)</span>
+                </div>
+
+                <h4>₹699</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Premium Rice", 699, "Grocery", "images/premium rice.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Premium Rice", 699, "images/premium rice.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- COOKING OIL -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Cooking Oil"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Fast Delivery
+                    </span>
+
+                    <img
+                        src="images/cooking oil.jpg"
+                        alt="Cooking Oil"
+                    >
+
+                </div>
+
+                <h3>Cooking Oil</h3>
+
+                <p>Quality cooking oil for daily use</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹169</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Cooking Oil", 169, "Grocery", "images/cooking oil.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Cooking Oil", 169, "images/cooking oil.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOOR DAL -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Toor Dal"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Fast Delivery
+                    </span>
+
+                    <img
+                        src="images/toor dal.jpg"
+                        alt="Toor Dal"
+                    >
+
+                </div>
+
+                <h3>Toor Dal</h3>
+
+                <p>Premium quality dal for everyday meals</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.6)</span>
+                </div>
+
+                <h4>₹189</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Toor Dal", 189, "Grocery", "images/toor dal.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Toor Dal", 189, "images/toor dal.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MIXED NUTS -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Mixed Nuts"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Premium
+                    </span>
+
+                    <img
+                        src="images/mixed nuts.jpg"
+                        alt="Mixed Nuts"
+                    >
+
+                </div>
+
+                <h3>Mixed Nuts</h3>
+
+                <p>Healthy and delicious premium mixed nuts</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.8)</span>
+                </div>
+
+                <h4>₹499</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Mixed Nuts", 499, "Grocery", "images/mixed nuts.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Mixed Nuts", 499, "images/mixed nuts.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUGAR -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Sugar"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Value
+                    </span>
+
+                    <img
+                        src="images/sugar.jpg"
+                        alt="Sugar"
+                    >
+
+                </div>
+
+                <h3>Sugar</h3>
+
+                <p>Quality sugar for everyday use</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐☆
+                    <span>(4.3)</span>
+                </div>
+
+                <h4>₹59</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Sugar", 59, "Grocery", "images/sugar.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Sugar", 59, "images/sugar.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- WHEAT FLOUR -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Wheat Flour"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Fast Delivery
+                    </span>
+
+                    <img
+                        src="images/wheat flour.jpg"
+                        alt="Wheat Flour"
+                    >
+
+                </div>
+
+                <h3>Wheat Flour</h3>
+
+                <p>Fine quality flour for everyday cooking</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.5)</span>
+                </div>
+
+                <h4>₹249</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Wheat Flour", 249, "Grocery", "images/wheat flour.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Wheat Flour", 249, "images/wheat flour.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SPICE POWDER -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Spice Powder"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img
+                        src="images/spice powder.jpg"
+                        alt="Spice Powder"
+                    >
+
+                </div>
+
+                <h3>Spice Powder</h3>
+
+                <p>Fresh and flavorful spice powder</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.4)</span>
+                </div>
+
+                <h4>₹129</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Spice Powder", 129, "Grocery", "images/spice powder.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Spice Powder", 129, "images/spice powder.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BISCUITS & SNACKS -->
+
+            <div
+                class="all-product-card grocery"
+                data-name="Biscuits Snacks"
+            >
+
+                <div class="all-product-image">
+
+                    <span class="product-badge">
+                        Popular
+                    </span>
+
+                    <img
+                        src="images/biscuit&snacks.jpg"
+                        alt="Biscuits and Snacks"
+                    >
+
+                </div>
+
+                <h3>Biscuits & Snacks</h3>
+
+                <p>Tasty snacks for every occasion</p>
+
+                <div class="product-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>(4.4)</span>
+                </div>
+
+                <h4>₹199</h4>
+
+                <p class="delivery-info">
+                    🚚 Delivery in 1–2 Days
+                </p>
+
+                <div class="product-buttons">
+
+                    <button
+                        type="button"
+                        onclick='addProductToCart("Biscuits & Snacks", 199, "Grocery", "images/biscuit&snacks.jpg")'
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick='addToWishlist("Biscuits & Snacks", 199, "images/biscuit&snacks.jpg")'
+                    >
+                        ❤️ Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="categories.js"></script>
+<script src="voice.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCart - Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <h3 id="welcomeUser">Welcome!</h3>
+        
+        <div class="logo">
+
+            🛒 SmartCart
+
+        </div>
+
+
+        <div class="search-box">
+
+           <input
+    type="text"
+    id="homeSearch"
+    placeholder="Search products..."
+>
+
+<button
+    type="button"
+    onclick="searchFromHome()"
+>
+    🔍 Search
+</button>
+
+<button
+    type="button"
+    id="homeVoiceBtn"
+    onclick="startHomeVoiceSearch()"
+>
+    🎤 Voice
+</button>
+        </button>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <span>👤 Hello, User</span>
+
+            <a href="cart.html">🛒 Cart</a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="navbar">
+
+        <a href="home.html">🏠 Home</a>
+
+        <a href="categories.html">📂 Categories</a>
+
+        <a href="products.html">🛍️ Products</a>
+
+        <a href="cart.html">🛒 Cart</a>
+
+        <a href="profile.html">👤 Profile</a>
+
+        <a href="index.html">🚪 Logout</a>
+
+    </nav>
+
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+
+                ✨ SMART SHOPPING STARTS HERE
+
+            </p>
+
+
+            <h1>
+
+                Everything You Need,
+
+                <span>All In One Place</span>
+
+            </h1>
+
+
+            <p>
+
+                Discover amazing products, great prices
+
+                and exciting offers at SmartCart.
+
+            </p>
+
+
+            <a href="products.html" class="shop-button">
+
+                🛍️ Shop Now
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            🛒
+
+        </div>
+
+    </section>
+    <section class="hero-banner">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">SMART SHOPPING • BETTER CHOICES</span>
+
+        <h1>
+            Shop Smarter with
+            <span>SmartCart</span>
+        </h1>
+
+        <p>
+            Discover great products, enjoy easy shopping,
+            and get everything you need in one place.
+        </p>
+
+        <button
+            type="button"
+            onclick="window.location.href='products.html'"
+            class="hero-shop-btn"
+        >
+            Shop Now →
+        </button>
+
+    </div>
+
+    <div class="hero-visual">
+
+        <div class="hero-circle"></div>
+
+        <div class="hero-card">
+            🛍️
+            <strong>Smart Shopping</strong>
+            <span>Everything you need</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- OFFER SECTION -->
+
+    <section class="offer-section">
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+
+                ⚡
+
+            </div>
+
+            <div>
+
+                <h3>Flash Deals</h3>
+
+                <p>Limited time offers</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+
+                🚚
+
+            </div>
+
+            <div>
+
+                <h3>Fast Delivery</h3>
+
+                <p>Quick doorstep delivery</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+
+                🔒
+
+            </div>
+
+            <div>
+
+                <h3>Secure Shopping</h3>
+
+                <p>Safe and trusted</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-card">
+
+            <div class="offer-icon">
+
+                💳
+
+            </div>
+
+            <div>
+
+                <h3>Easy Payment</h3>
+
+                <p>Simple payment options</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CATEGORIES -->
+
+    <section class="category-section">
+
+        <div class="section-heading">
+
+            <h2>Shop By Categories</h2>
+
+            <a href="categories.html">
+
+                View All →
+
+            </a>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    📱
+
+                </div>
+
+                <h3>Electronics</h3>
+
+                <p>Mobiles, headphones and more</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    👕
+                </div>
+
+                <h3>Fashion</h3>
+
+                <p>Trendy clothes and accessories</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    💻
+
+                </div>
+
+                <h3>Laptops</h3>
+
+                <p>Powerful laptops and computers</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    📚
+
+                </div>
+
+                <h3>Books</h3>
+
+                <p>Learn and explore new worlds</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    🎮
+
+                </div>
+
+                <h3>Gaming</h3>
+
+                <p>Games and gaming accessories</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">
+
+                    🛒
+
+                </div>
+
+                <h3>Grocery</h3>
+
+                <p>Daily needs and essentials</p>
+
+                <a href="categories.html">
+
+                    View Products
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURED PRODUCTS -->
+
+    <section class="products-section">
+
+        <div class="section-heading">
+
+            <h2>Featured Products</h2>
+
+            <a href="products.html">
+
+                View All →
+
+            </a>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    🎧
+
+                </div>
+
+
+                <span class="discount">
+
+                    20% OFF
+
+                </span>
+
+
+                <h3>Wireless Headphones</h3>
+
+
+                <p class="rating">
+
+                    ⭐⭐⭐⭐⭐
+
+                </p>
+
+
+                <p class="price">
+
+                    ₹1,999
+
+                </p>
+
+
+                <button
+
+                    onclick="addToCart('Wireless Headphones', 1999)"
+
+                >
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    ⌚
+
+                </div>
+
+
+                <span class="discount">
+
+                    15% OFF
+
+                </span>
+
+
+                <h3>Smart Watch</h3>
+
+
+                <p class="rating">
+
+                    ⭐⭐⭐⭐☆
+
+                </p>
+
+
+                <p class="price">
+
+                    ₹999
+
+                </p>
+
+
+                <button
+
+                    onclick="addToCart('Smart Watch', 999)"
+
+                >
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    💻
+
+                </div>
+
+
+                <span class="discount">
+
+                    10% OFF
+
+                </span>
+
+
+                <h3>Modern Laptop</h3>
+
+
+                <p class="rating">
+
+                    ⭐⭐⭐⭐⭐
+
+                </p>
+
+
+                <p class="price">
+
+                    ₹55,999
+
+                </p>
+
+
+                <button
+
+                    onclick="addToCart('Modern Laptop', 55999)"
+
+                >
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+
+                    📱
+
+                </div>
+
+
+                <span class="discount">
+
+                    25% OFF
+
+                </span>
+
+
+                <h3>Smartphone</h3>
+
+
+                <p class="rating">
+
+                    ⭐⭐⭐⭐☆
+
+                </p>
+
+
+                <p class="price">
+
+                    ₹19,999
+
+                </p>
+
+
+                <button
+
+                    onclick="addToCart('Smartphone', 19999)"
+
+                >
+
+                    🛒 Add to Cart
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>🛒 SmartCart</h2>
+
+        <p>
+
+            Your trusted online shopping destination.
+
+        </p>
+
+        <p>
+
+            © 2026 SmartCart. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        // ADD TO CART
+
+        function addToCart(productName, price) {
+
+
+            let cart =
+
+                JSON.parse(
+
+                    localStorage.getItem("cart")
+
+                ) || [];
+
+
+            cart.push({
+
+                name: productName,
+
+                price: price
+
+            });
+
+
+            localStorage.setItem(
+
+                "cart",
+
+                JSON.stringify(cart)
+
+            );
+
+
+            alert(
+
+                productName +
+
+                " added to cart 🛒"
+
+            );
+
+        }
+
+
+
+        // SEARCH PRODUCT
+
+        function searchProduct() {
+
+
+            const searchValue =
+
+                document
+
+                .getElementById("searchInput")
+
+                .value
+
+                .toLowerCase();
+
+
+            if (searchValue === "") {
+
+
+                alert(
+
+                    "Please enter a product name"
+
+                );
+
+
+                return;
+
+            }
+
+
+            window.location.href =
+
+                "products.html?search=" +
+
+                searchValue;
+
+        }
+
+
+    </script>
+
+<script src="login.js"></script>
+
+<script src="home.js"></script>
+<script src="voice.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCart | Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- Animated Background -->
+
+    <div class="background-shape shape-one"></div>
+
+    <div class="background-shape shape-two"></div>
+
+
+    <!-- Main Login Container -->
+
+    <main class="login-container">
+
+
+        <!-- Left Side -->
+
+        <section class="login-intro">
+
+
+            <div class="intro-content">
+
+
+                <div class="brand-logo">
+
+                    🛒
+
+                </div>
+
+
+                <h1>
+
+                    Smart<span>Cart</span>
+
+                </h1>
+
+
+                <h2>
+
+                    Shop Smart.
+
+                    <br>
+
+                    Live Better.
+
+                </h2>
+
+
+                <p>
+
+                    Discover amazing products,
+
+                    exciting deals, and everything
+
+                    you need in one place.
+
+                </p>
+
+
+                <div class="intro-features">
+
+
+                    <div>
+
+                        🚚
+
+                        <span>
+
+                            Fast Delivery
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        🔒
+
+                        <span>
+
+                            Secure Shopping
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        ⭐
+
+                        <span>
+
+                            Best Products
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Right Side Login -->
+
+        <section class="login-section">
+
+
+            <div class="login-box">
+
+
+                <div class="login-icon">
+
+                    👋
+
+                </div>
+
+
+                <h2>
+
+                    Welcome Back!
+
+                </h2>
+
+
+                <p class="login-subtitle">
+
+                    Login to continue shopping
+
+                </p>
+
+
+                <!-- Login Form -->
+
+                <form id="loginForm">
+
+
+                    <!-- Username -->
+
+                    <div class="input-group">
+
+
+                        <label for="username">
+
+                            Username or Email
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+
+                            <span>
+
+                                👤
+
+                            </span>
+
+
+                            <input
+
+                                type="text"
+
+                                id="username"
+
+                                placeholder="Enter your username"
+
+                                required
+
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="input-group">
+
+
+                        <label for="password">
+
+                            Password
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+
+                            <span>
+
+                                🔒
+
+                            </span>
+
+
+                            <input
+
+                                type="password"
+
+                                id="password"
+
+                                placeholder="Enter your password"
+
+                                required
+
+                            >
+
+
+                            <button
+
+                                type="button"
+
+                                class="password-toggle"
+
+                                onclick="togglePassword()"
+
+                            >
+
+                                👁️
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Remember and Forgot -->
+
+                    <div class="login-options">
+
+
+                        <label>
+
+                            <input
+
+                                type="checkbox"
+
+                                id="rememberMe"
+
+                            >
+
+                            Remember me
+
+                        </label>
+
+
+                        <a href="#">
+
+                            Forgot Password?
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button
+
+                        type="submit"
+
+                        class="login-button"
+
+                    >
+
+                        Login
+
+                        <span>
+
+                            →
+
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- Message -->
+
+                <p
+
+                    id="loginMessage"
+
+                    class="login-message"
+
+                ></p>
+
+
+                <!-- Register -->
+
+                <div class="register-section">
+
+
+                    <p>
+
+                        Don't have an account?
+
+                    </p>
+
+
+                    <a href="#">
+
+                        Create an Account
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- Demo Login -->
+
+                <div class="demo-login">
+
+
+                    <p>
+
+                        Demo Login
+
+                    </p>
+
+
+                    <small>
+
+                        Username: <b>admin</b>
+
+                        &nbsp; | &nbsp;
+
+                        Password: <b>1234</b>
+
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Login JavaScript -->
+
+    <script src="login.js"></script>
+
+
+</body>
+
+</html>

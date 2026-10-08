@@ -1,0 +1,670 @@
+/* =========================================
+   SMARTCART PROFILE PAGE
+========================================= */
+
+
+/* PROFILE CONTAINER */
+
+.profile-container {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+
+    animation: pageEnter 1s ease-out;
+
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+
+    width: 420px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 25px;
+
+    box-shadow:
+
+        0 15px 40px
+
+        rgba(0, 0, 0, 0.15);
+
+    animation:
+
+        cardEnter
+
+        1.2s
+
+        ease-out;
+
+    transition:
+
+        transform 0.4s ease,
+
+        box-shadow 0.4s ease;
+
+}
+
+
+.profile-card:hover {
+
+    transform:
+
+        translateY(-10px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 25px 60px
+
+        rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* =========================================
+   PROFILE PHOTO
+========================================= */
+
+.profile-avatar {
+
+    width: 130px;
+
+    height: 130px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 5px solid #2874f0;
+
+    box-shadow:
+
+        0 10px 30px
+
+        rgba(40, 116, 240, 0.35);
+
+    animation:
+
+        avatarFloat
+
+        2.5s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+
+.profile-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   CHANGE PHOTO BUTTON
+========================================= */
+
+.change-photo-button {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    background: #e8f0ff;
+
+    color: #2874f0;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+
+        transform 0.3s ease,
+
+        background 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+
+.change-photo-button:hover {
+
+    transform:
+
+        translateY(-4px)
+
+        scale(1.05);
+
+    background: #2874f0;
+
+    color: white;
+
+    box-shadow:
+
+        0 8px 20px
+
+        rgba(40, 116, 240, 0.3);
+
+}
+
+
+/* =========================================
+   NAME & EMAIL
+========================================= */
+
+.profile-card h1 {
+
+    margin: 10px 0;
+
+    font-size: 32px;
+
+    color: #222;
+
+    animation:
+
+        textEnter
+
+        1s
+
+        ease
+
+        0.3s
+
+        both;
+
+}
+
+
+.profile-card > p {
+
+    color: #666;
+
+    font-size: 16px;
+
+    animation:
+
+        textEnter
+
+        1s
+
+        ease
+
+        0.5s
+
+        both;
+
+}
+
+
+/* LINE */
+
+.profile-card hr {
+
+    border: none;
+
+    height: 1px;
+
+    background: #ddd;
+
+    margin: 25px 0;
+
+}
+
+
+/* =========================================
+   PROFILE INFORMATION
+========================================= */
+
+.profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: left;
+
+}
+
+
+.profile-info div {
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #f5f7fb;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    transition:
+
+        transform 0.3s ease,
+
+        background 0.3s ease;
+
+}
+
+
+.profile-info div:nth-child(1) {
+
+    animation:
+
+        slideFromLeft
+
+        0.8s
+
+        ease
+
+        0.7s
+
+        both;
+
+}
+
+
+.profile-info div:nth-child(2) {
+
+    animation:
+
+        slideFromRight
+
+        0.8s
+
+        ease
+
+        0.9s
+
+        both;
+
+}
+
+
+.profile-info div:hover {
+
+    transform:
+
+        scale(1.04);
+
+    background: #e8f0ff;
+
+}
+
+
+.profile-info span {
+
+    color: #666;
+
+}
+
+
+.profile-info strong {
+
+    color: #222;
+
+    word-break: break-word;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.profile-actions {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    animation:
+
+        buttonsEnter
+
+        1s
+
+        ease
+
+        1.1s
+
+        both;
+
+}
+
+
+.profile-button,
+
+.logout-button {
+
+    flex: 1;
+
+    padding: 14px 10px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+
+.profile-button {
+
+    background: #2874f0;
+
+    color: white;
+
+}
+
+
+.profile-button:hover {
+
+    transform:
+
+        translateY(-6px)
+
+        scale(1.04);
+
+    box-shadow:
+
+        0 10px 25px
+
+        rgba(40, 116, 240, 0.4);
+
+}
+
+
+.logout-button {
+
+    background: #ff5252;
+
+    color: white;
+
+}
+
+
+.logout-button:hover {
+
+    transform:
+
+        translateY(-6px)
+
+        scale(1.04);
+
+    box-shadow:
+
+        0 10px 25px
+
+        rgba(255, 82, 82, 0.4);
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes cardEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(100px)
+
+            scale(0.7);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes avatarFloat {
+
+    0% {
+
+        transform:
+
+            translateY(0)
+
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+
+            translateY(-15px)
+
+            rotate(4deg);
+
+    }
+
+    100% {
+
+        transform:
+
+            translateY(0)
+
+            rotate(0deg);
+
+    }
+
+}
+
+
+@keyframes textEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes slideFromLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateX(-60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes slideFromRight {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateX(60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateX(0);
+
+    }
+
+}
+
+
+@keyframes buttonsEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .profile-card {
+
+        width: 100%;
+
+        padding: 30px 20px;
+
+    }
+
+
+    .profile-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .profile-info div {
+
+        flex-direction: column;
+
+        gap: 6px;
+
+    }
+
+}

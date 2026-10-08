@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        SmartCart | Profile
+    </title>
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- Profile CSS -->
+
+    <link
+        rel="stylesheet"
+        href="profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+
+        <div class="logo">
+
+            🛒 SmartCart
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a href="home.html">
+
+                🏠 Home
+
+            </a>
+
+
+            <a href="cart.html">
+
+                🛒 Cart
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+
+        <a href="home.html">
+
+            🏠 Home
+
+        </a>
+
+
+        <a href="categories.html">
+
+            📂 Categories
+
+        </a>
+
+
+        <a href="products.html">
+
+            🛍️ Products
+
+        </a>
+
+
+        <a href="cart.html">
+
+            🛒 Cart
+
+        </a>
+
+
+        <a href="orders.html">
+
+            📦 My Orders
+
+        </a>
+
+
+        <a href="profile.html">
+
+            👤 Profile
+
+        </a>
+
+
+        <a href="index.html">
+
+            🚪 Logout
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- PROFILE MAIN -->
+
+    <main class="profile-container">
+
+
+        <!-- PROFILE CARD -->
+
+        <section class="profile-card">
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile-avatar">
+
+
+                <img
+
+                    id="profileImage"
+
+                    src="https://via.placeholder.com/150"
+
+                    alt="Profile Picture"
+
+                >
+
+
+            </div>
+
+
+
+            <!-- CHOOSE PHOTO -->
+
+            <input
+
+                type="file"
+
+                id="imageUpload"
+
+                accept="image/*"
+
+                hidden
+
+            >
+
+
+            <label
+
+                for="imageUpload"
+
+                class="change-photo-button"
+
+            >
+
+                📸 Choose Profile Picture
+
+            </label>
+
+
+
+            <!-- USER NAME -->
+
+            <h1 id="profileName">
+
+                User
+
+            </h1>
+
+
+
+            <!-- USER EMAIL -->
+
+            <p id="profileEmail">
+
+                user@email.com
+
+            </p>
+
+
+
+            <hr>
+
+
+
+            <!-- USER INFORMATION -->
+
+            <div class="profile-info">
+
+
+                <div>
+
+
+                    <span>
+
+                        👤 Name
+
+                    </span>
+
+
+                    <strong id="userName">
+
+                        -
+
+                    </strong>
+
+
+                </div>
+
+
+
+                <div>
+
+
+                    <span>
+
+                        📧 Email
+
+                    </span>
+
+
+                    <strong id="userEmail">
+
+                        -
+
+                    </strong>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="profile-actions">
+
+
+                <a
+
+                    href="orders.html"
+
+                    class="profile-button"
+
+                >
+
+                    📦 My Orders
+
+                </a>
+
+                <button
+                    id="editProfileButton"
+                    class="edit-profile-button"
+                    onclick="openEditProfile()"
+                >
+                    ✏️ Edit Profile
+                </button>
+
+                <!-- EDIT PROFILE FORM -->
+
+<div
+    id="editProfileForm"
+    class="edit-profile-form"
+    style="display: none;"
+>
+
+    <h2>
+        ✏️ Edit Profile
+    </h2>
+
+
+    <input
+        type="text"
+        id="editName"
+        placeholder="Enter your name"
+    >
+
+
+    <input
+        type="email"
+        id="editEmail"
+        placeholder="Enter your email"
+    >
+
+
+    <div class="edit-buttons">
+
+        <button
+            onclick="saveProfile()"
+            class="save-profile-button"
+        >
+
+            💾 Save Changes
+
+        </button>
+
+
+        <button
+            onclick="closeEditProfile()"
+            class="cancel-profile-button"
+        >
+
+            ❌ Cancel
+
+        </button>
+
+    </div>
+
+</div>
+
+                <button
+
+                    onclick="logout()"
+
+                    class="logout-button"
+
+                >
+
+                    🚪 Logout
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- PROFILE JAVASCRIPT -->
+
+    <script src="profile.js"></script>
+
+<script src="voice.js"></script>
+</body>
+
+</html>
